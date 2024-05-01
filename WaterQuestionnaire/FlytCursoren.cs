@@ -9,41 +9,7 @@ namespace WaterQuestionnaire
         /// Boundary for cursor
         /// </summary>
         public static int Max { get; set; }
-        FlytCursoren()
-        {
-            while (true)
-            {
-                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-                if (keyInfo.Key == ConsoleKey.UpArrow)
-                {
-                    if (Console.CursorTop > 0)
-                    {
-                        Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
-                    }
-                }
-                else if (keyInfo.Key == ConsoleKey.DownArrow)
-                {
-                    if (Console.CursorTop < Console.WindowHeight - 1)
-                    {
-                        Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop + 1);
-                    }
-                }
-                else if (keyInfo.Key == ConsoleKey.LeftArrow)
-                {
-                    if (Console.CursorLeft > 0)
-                    {
-                        Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-                    }
-                }
-                else if (keyInfo.Key == ConsoleKey.RightArrow)
-                {
-                    if (Console.CursorLeft < Console.WindowWidth - 1)
-                    {
-                        Console.SetCursorPosition(Console.CursorLeft + 1, Console.CursorTop);
-                    }
-                }
-            }
-        }
+
         /// <summary>
         /// Moving cursor up and down with boundaries
         /// </summary>
