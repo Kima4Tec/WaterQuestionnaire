@@ -80,14 +80,14 @@ namespace WaterQuestionnaire
                 {
                     Console.SetCursorPosition(cursorLeft, cursorTop);
                     Console.Write("x");
-                    if (cursorTop == Program.Right)
+                    if (cursorTop == QuestionHandler.Right)
                     {
                         Console.SetCursorPosition(4, 9);
                         Console.WriteLine("Det er rigtigt!");
                         Console.SetCursorPosition(0, 11);
                         Console.WriteLine($"{explanation}");
                         Console.ReadKey();
-                        Program.AntalRigtige++;
+                        QuestionHandler.AntalRigtige++;
                         break;
                     }
                     else
@@ -97,7 +97,7 @@ namespace WaterQuestionnaire
                         Console.SetCursorPosition(0, 11);
                         Console.WriteLine($"{explanation}");
                         Console.ReadKey();
-                        Program.AntalForkerte++;
+                        QuestionHandler.AntalForkerte++;
                         break;
                     }
                 }
